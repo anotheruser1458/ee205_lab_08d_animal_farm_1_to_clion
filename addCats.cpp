@@ -10,7 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include "main.h"
 
-int addCat(struct cat catStructArray[], size_t* totalCats, char name[], catGender gender, catBreed breed, bool isFixed, Weight* weight, Color collarColor1, Color collarColor2, unsigned long long license) {
+int addCat(struct cat catStructArray[], NumCats* totalCats, char name[], catGender gender, catBreed breed, bool isFixed, Weight* weight, Color collarColor1, Color collarColor2, unsigned long long license) {
 
 #ifdef DEBUG
     fprintf(stdout,"db = %s\n", isDbFull(*totalCats)?"true":"false");

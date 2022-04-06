@@ -26,6 +26,8 @@ typedef enum {UNKNOWN_GENDER, MALE, FEMALE} catGender;
 typedef enum {UNKNOWN_BREED, MAINE_COON, MANX, SHORTHAIR, PERSIAN, SPHYNX} catBreed;
 typedef enum {BLACK, WHITE, RED, BLUE, GREEN, PINK, UNKNOWN_COLOR} Color;
 typedef float Weight;
+typedef size_t NumCats;
+
 struct cat {
     char name[MAX_CAT_NAME];
     catGender gender;
@@ -39,14 +41,14 @@ struct cat {
 
 
 extern void initializeCatsStructArray(struct cat catStructArray[] );
-extern int addCat(struct cat catStructArray[], size_t* totalCats, char name[], catGender gender, catBreed breed, bool isFixed, Weight* weight, Color collarColor1, Color collarColor2, unsigned long long license);
-extern int printAllCats(struct cat catStructArray[], size_t* totalCats);
-extern int findCat(struct cat catStructArray[], size_t* totalCats, char name[MAX_CAT_NAME]);
-extern int updateCatName(struct cat catStructArray[], size_t* totalCats, int index, char newName[]);
-extern int printCat(struct cat catStructArray[], size_t* totalCats, int index);
+extern int addCat(struct cat catStructArray[], NumCats* totalCats, char name[], catGender gender, catBreed breed, bool isFixed, Weight* weight, Color collarColor1, Color collarColor2, unsigned long long license);
+extern int printAllCats(struct cat catStructArray[], NumCats* totalCats);
+extern int findCat(struct cat catStructArray[], NumCats* totalCats, char name[MAX_CAT_NAME]);
+extern int updateCatName(struct cat catStructArray[], NumCats* totalCats, int index, char newName[]);
+extern int printCat(struct cat catStructArray[], NumCats* totalCats, int index);
 extern void fixCat(struct cat catStructArray[], int index);
 extern void updateCatCollar1(struct cat catStructArray[], int index, Color newCollarCollar1);
 extern void updateCatCollar2(struct cat catStructArray[], int index, Color newCollarCollar2);
 extern void updateCatLicense(struct cat catStructArray[], int index, unsigned long long newLicense);
-extern int deleteCat(struct cat catStructArray[], size_t* totalCats, int index);
-extern void deleteAllCats(struct cat catStructArray[], size_t* totalCats);
+extern int deleteCat(struct cat catStructArray[], NumCats* totalCats, int index);
+extern void deleteAllCats(struct cat catStructArray[], NumCats* totalCats);

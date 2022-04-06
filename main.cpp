@@ -14,7 +14,7 @@ int main() {
     fprintf(stdout,"Starting Animal Farm 1\n\n");
 
     struct cat catArray[MAX_CATS];
-    size_t totalCats = 0;
+    NumCats totalCats = 0;
     initializeCatsStructArray(catArray);
 
     Weight w = 8.5, w2 = 7.0, w3 = 18.2, w4 = 9.2, w5 = 12.2, w6 = 19.0;

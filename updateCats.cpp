@@ -10,7 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include "main.h"
 
-int updateCatName(struct cat catStructArray[], size_t* totalCats, int index, char newName[]) {
+int updateCatName(struct cat catStructArray[], NumCats* totalCats, int index, char newName[]) {
 
     if (findCat(catStructArray, totalCats, newName) >= 0) {
         fprintf(stdout,"Sorry, %s is already a cat on the farm.\n", newName);

@@ -10,7 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include "main.h"
 
-size_t totalCats = 0;
+NumCats totalCats = 0;
 struct cat cats[MAX_CATS];
 
 //function

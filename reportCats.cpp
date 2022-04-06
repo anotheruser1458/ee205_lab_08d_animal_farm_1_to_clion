@@ -35,7 +35,7 @@ static const char * const genderNames[] = {
         [FEMALE] = "FEMALE",
 };
 
-int printCat(struct cat catStructArray[], size_t* totalCats, int index) {
+int printCat(struct cat catStructArray[], NumCats* totalCats, int index) {
     // less than 0
     if (index < 0) {
         fprintf(stdout,"Bad Code [%d]\n", index);
@@ -53,7 +53,7 @@ int printCat(struct cat catStructArray[], size_t* totalCats, int index) {
     return 0;
 }
 
-int printAllCats(struct cat catStructArray[], size_t* totalCats) {
+int printAllCats(struct cat catStructArray[], NumCats* totalCats) {
 
     if (*totalCats == 0) {
         fprintf(stdout,"There are no cats on the farm.\n");
@@ -66,7 +66,7 @@ int printAllCats(struct cat catStructArray[], size_t* totalCats) {
     return 0;
 }
 
-int findCat(struct cat catStructArray[], size_t* totalCats, char name[MAX_CAT_NAME]) {
+int findCat(struct cat catStructArray[], NumCats* totalCats, char name[MAX_CAT_NAME]) {
     for (int i = 0; i < *totalCats; i++) {
         if (!strcmp(catStructArray[i].name, name)) {
             return i;

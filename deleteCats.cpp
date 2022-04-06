@@ -10,13 +10,13 @@
 ///////////////////////////////////////////////////////////////////////////////
 #include "main.h"
 
-void deleteAllCats(struct cat catStructArray[], size_t* totalCats) {
+void deleteAllCats(struct cat catStructArray[], NumCats* totalCats) {
     *totalCats = 0;
     initializeCatsStructArray(catStructArray);
     fprintf(stdout,"CAT MASACRE: All the cats have been successfully killed\n");
 }
 
-int deleteCat(struct cat catStructArray[], size_t* totalCats, int index) {
+int deleteCat(struct cat catStructArray[], NumCats* totalCats, int index) {
     for (int i = 0; i<*totalCats-index-1; i++) {
         fprintf(stdout,"i = %d\n", i);
         catStructArray[index + i] = catStructArray[index + i + 1];

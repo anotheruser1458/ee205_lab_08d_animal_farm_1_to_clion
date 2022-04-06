@@ -15,7 +15,7 @@ int moveCatBackOneIndex(struct cat catStructArray[], int index) {
     return 0;
 }
 
-bool isDbFull(size_t totalCats) {
+bool isDbFull(NumCats totalCats) {
     return totalCats == MAX_CATS ? true:false;
 }
 

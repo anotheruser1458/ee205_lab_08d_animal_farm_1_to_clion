@@ -30,7 +30,7 @@
 //int addCatTests() {
 //
 //    //isDbFull
-//    size_t testTotalCats = MAX_CATS;
+//    NumCats testTotalCats = MAX_CATS;
 //    bool isFull = isDbFull(testTotalCats);
 //    fprintf(stdout,"totalCats = %lu\n", testTotalCats);
 //    fprintf(stdout,isFull?"full\n":"notFull\n");
@@ -78,7 +78,7 @@
 //int deleteCatsTest() {
 //
 //    struct cat testCatStructArray[MAX_CATS];
-//    size_t testTotalCats = 0;
+//    NumCats testTotalCats = 0;
 //    Weight w = 8.92;
 //    Weight w2 = 3.2;
 //    Weight w3 = 3.4;
@@ -103,7 +103,7 @@
 //
 //int updateCatsTest() {
 //    struct cat testCatStructArray[MAX_CATS];
-//    size_t testTotalCats = 0;
+//    NumCats testTotalCats = 0;
 //    initializeCatsStructArray(testCatStructArray);
 //    Weight w = 14.32;
 //    addCat(testCatStructArray, &testTotalCats, "mittens", MALE, MAINE_COON, false, &w);
@@ -125,7 +125,7 @@
 //
 //int reportCatsTest() {
 //    struct cat testCatArray[MAX_CATS];
-//    size_t testTotalCats = 0;
+//    NumCats testTotalCats = 0;
 //    initializeCatsStructArray(testCatArray);
 //    Weight w = 13.8;
 //    initializeCatsStructArray(testCatArray);
