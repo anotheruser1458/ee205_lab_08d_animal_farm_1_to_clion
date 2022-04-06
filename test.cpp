@@ -55,7 +55,7 @@
 //    fprintf(stdout,"isNameLargerThan30Char = %s\n\n", isNameLargerThan30Char(name)?"true":"false");
 //
 //    //isWeightLargerThanZero
-//    float weight = 0.0;
+//    Weight weight = 0.0;
 //    fprintf(stdout,"weight = %f\n", weight);
 //    fprintf(stdout,"isWeightLargerThanZero = %s\n", isWeightLargerThanZero(&weight)?"true":"false");
 //    weight = 1.0;
@@ -67,10 +67,10 @@
 //    initializeCatsStructArray(testCatStructArray);
 //    fprintf(stdout,"testTotalCats = %lu\n", testTotalCats);
 //    fprintf(stdout,"cat[0].name = %s\n", testCatStructArray[0].name);
-//    float w = 3.8;
+//    Weight w = 3.8;
 //    addCat(testCatStructArray, &testTotalCats, "mittens", MALE, MAINE_COON, true, &w);
 //    fprintf(stdout,"testTotalCats = %lu\n", testTotalCats);
-//    fprintf(stdout,"cat[0].name = %s cat[0].float = %f\n\n", testCatStructArray[0].name, testCatStructArray[0].weight);
+//    fprintf(stdout,"cat[0].name = %s cat[0].Weight = %f\n\n", testCatStructArray[0].name, testCatStructArray[0].weight);
 //
 //    return 0;
 //}
@@ -79,12 +79,12 @@
 //
 //    struct cat testCatStructArray[MAX_CATS];
 //    size_t testTotalCats = 0;
-//    float w = 8.92;
-//    float w2 = 3.2;
-//    float w3 = 3.4;
-//    float w4 = 3.5;
-//    float w5 = 89.3;
-//    float w6 = 3.2;
+//    Weight w = 8.92;
+//    Weight w2 = 3.2;
+//    Weight w3 = 3.4;
+//    Weight w4 = 3.5;
+//    Weight w5 = 89.3;
+//    Weight w6 = 3.2;
 //    addCat(testCatStructArray, &testTotalCats, "mittens", MALE, MAINE_COON, true, &w);
 //    addCat(testCatStructArray, &testTotalCats, "jess", MALE, MAINE_COON, true, &w6);
 //    addCat(testCatStructArray, &testTotalCats, "anothony", MALE, MAINE_COON, true, &w2);
@@ -105,9 +105,9 @@
 //    struct cat testCatStructArray[MAX_CATS];
 //    size_t testTotalCats = 0;
 //    initializeCatsStructArray(testCatStructArray);
-//    float w = 14.32;
+//    Weight w = 14.32;
 //    addCat(testCatStructArray, &testTotalCats, "mittens", MALE, MAINE_COON, false, &w);
-//    float w2 = 32.1;
+//    Weight w2 = 32.1;
 //    addCat(testCatStructArray, &testTotalCats, "ralph", MALE, MAINE_COON, false, &w2);
 //
 //    updateCatName(testCatStructArray, &testTotalCats, 0, "ralph");
@@ -117,7 +117,7 @@
 //
 //    fixCat(testCatStructArray, 0);
 //
-//    float w3 = 11.2;
+//    Weight w3 = 11.2;
 //    updateCatWeight(testCatStructArray, 0, &w3);
 //
 //    return 0;
@@ -127,17 +127,17 @@
 //    struct cat testCatArray[MAX_CATS];
 //    size_t testTotalCats = 0;
 //    initializeCatsStructArray(testCatArray);
-//    float w = 13.8;
+//    Weight w = 13.8;
 //    initializeCatsStructArray(testCatArray);
 //    addCat(testCatArray, &testTotalCats, "mittens", MALE, MAINE_COON, true, &w);
-//    float w2 = 18.2;
+//    Weight w2 = 18.2;
 //    addCat(testCatArray, &testTotalCats, "ginger", FEMALE, UNKNOWN_BREED, false, &w2);
 //    //print cat
 //    printCat(testCatArray, testTotalCats, 0);
 //    fprintf(stdout,"\n");
 //
 //    //find cat
-//    float w3 = 19.2;
+//    Weight w3 = 19.2;
 //    addCat(testCatArray, &testTotalCats, "johnson", MALE, MAINE_COON, false, &w3);
 //    fprintf(stdout,"findCat = %d\n", findCat(testCatArray, &testTotalCats, "mittens"));
 //    fprintf(stdout,"findCat = %d\n", findCat(testCatArray, &testTotalCats, "ginger"));

@@ -49,7 +49,7 @@ void fixCat(struct cat catStructArray[], int index) {
 #endif
 }
 
-int updateCatWeight(struct cat catStructArray[], int index, float* newWeight) {
+int updateCatWeight(struct cat catStructArray[], int index, Weight* newWeight) {
 
     if (*newWeight <= 0) {
         fprintf(stdout,"The new weight needs to be > 0\n");

@@ -27,6 +27,6 @@ bool isNameLargerThan30Char(char name[]) {
     return strlen(name) > 30 ? true:false;
 }
 
-bool isWeightLargerThanZero(float* weight) {
+bool isWeightLargerThanZero(Weight* weight) {
     return *weight > 0.0 ? true:false;
 }
