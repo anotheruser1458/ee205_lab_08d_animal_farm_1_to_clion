@@ -37,6 +37,7 @@ struct cat {
     unsigned long long license;
 };
 
+
 extern void initializeCatsStructArray(struct cat catStructArray[] );
 extern int addCat(struct cat catStructArray[], size_t* totalCats, char name[], catGender gender, catBreed breed, bool isFixed, Weight* weight, Color collarColor1, Color collarColor2, unsigned long long license);
 extern int printAllCats(struct cat catStructArray[], size_t* totalCats);
