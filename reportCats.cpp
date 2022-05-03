@@ -9,6 +9,7 @@
 /// @date   19_Mar_2022
 ///////////////////////////////////////////////////////////////////////////////
 #include "main.h"
+#include "math.h"
 
 static const char * const colorNames[] = {
         [BLACK] = "BLACK",
@@ -38,25 +39,62 @@ static const char * const genderNames[] = {
         [FEMALE] = "FEMALE",
 };
 
-char* convertMonth(int mon) {
-    char month[5];
+const char* convertMonth(int mon) {
     switch(mon) {
-        case 0: strcpy(month, "01"); break;
-        case 1: strcpy(month, "02"); break;
-        case 2: strcpy(month, "03"); break;
-        case 3: strcpy(month, "04"); break;
-        case 4: strcpy(month, "05"); break;
-        case 5: strcpy(month, "06"); break;
-        case 6: strcpy(month, "07"); break;
-        case 7: strcpy(month, "08"); break;
-        case 8: strcpy(month, "09"); break;
-        case 9: strcpy(month, "10"); break;
-        case 10: strcpy(month, "11"); break;
-        case 11: strcpy(month, "12"); break;
+        case 0: return "01";
+        case 1: return "02";
+        case 2: return "03";
+        case 3: return "04";
+        case 4: return "05";
+        case 5: return "06";
+        case 6: return "07";
+        case 7: return "08";
+        case 8: return "09";
+        case 9: return "10";
+        case 10: return "11";
+        case 11: return "12";
     }
-    printf("%s\n", month);
-    return month;
 }
+
+
+
+const char* convertDay(int day) {
+    switch(day) {
+        case 1: return "01";
+        case 2: return "02";
+        case 3: return "03";
+        case 4: return "04";
+        case 5: return "05";
+        case 6: return "06";
+        case 7: return "07";
+        case 8: return "08";
+        case 9: return "09";
+        case 10: return "10";
+        case 11: return "11";
+        case 12: return "12";
+        case 13: return "13";
+        case 14: return "14";
+        case 15: return "15";
+        case 16: return "16";
+        case 17: return "17";
+        case 18: return "18";
+        case 19: return "19";
+        case 20: return "20";
+        case 21: return "21";
+        case 22: return "22";
+        case 23: return "23";
+        case 24: return "24";
+        case 25: return "25";
+        case 26: return "26";
+        case 27: return "27";
+        case 28: return "28";
+        case 29: return "29";
+        case 30: return "30";
+        case 31: return "31";
+        default: return "unknown day";
+    }
+}
+
 
 
 int printCat(struct cat catStructArray[], NumCats* totalCats, int index) {
@@ -73,8 +111,8 @@ int printCat(struct cat catStructArray[], NumCats* totalCats, int index) {
     }
 
     struct cat currentCat = catStructArray[index];
-    fprintf(stdout,"cat index = [%d] name=[%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%f] collarColor1 = [%s] collarColor2 = [%s] license = [%llu] birthday = [%s/%s/%s]\n", index, currentCat.name, genderNames[currentCat.gender], breedNames[currentCat.breed], currentCat.isFixed, currentCat.weight, colorNames[currentCat.collarColor1], colorNames[currentCat.collarColor2], currentCat.license,
-            convertMonth(currentCat.birthday.tm_mon), convertMonth(currentCat.birthday.tm_mon), convertMonth(currentCat.birthday.tm_mon));
+    fprintf(stdout,"cat index = [%d] name=[%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%f] collarColor1 = [%s] collarColor2 = [%s] license = [%llu] birthday = [%s/%s/%d]\n", index, currentCat.name, genderNames[currentCat.gender], breedNames[currentCat.breed], currentCat.isFixed, currentCat.weight, colorNames[currentCat.collarColor1], colorNames[currentCat.collarColor2], currentCat.license,
+            convertMonth(currentCat.birthday.tm_mon), convertDay(currentCat.birthday.tm_mday), currentCat.birthday.tm_year%100);
     return 0;
 }
 

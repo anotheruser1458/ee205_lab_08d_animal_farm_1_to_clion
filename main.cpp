@@ -18,7 +18,7 @@ int main() {
     initializeCatsStructArray(catArray);
 
     Weight w = 8.5, w2 = 7.0, w3 = 18.2, w4 = 9.2, w5 = 12.2, w6 = 19.0;
-    char bd1[] = "February 4, 2000";
+    char bd1[] = "February 03, 2015";
     addCat(catArray, &totalCats, "Loki", MALE, PERSIAN, true, &w, BLACK, WHITE, 101, bd1);
     cat c1 = catArray[0];
     printf("%d %d %d", c1.birthday.tm_mon, c1.birthday.tm_mday, c1.birthday.tm_year);
