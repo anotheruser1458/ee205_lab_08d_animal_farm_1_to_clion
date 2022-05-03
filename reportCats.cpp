@@ -17,6 +17,9 @@ static const char * const colorNames[] = {
         [BLUE] = "BLUE",
         [GREEN] = "GREEN",
         [PINK] = "PINK",
+        [ORANGE] = "ORANGE",
+        [YELLOW] = "YELLOW",
+        [TAN] = "TAN",
         [UNKNOWN_COLOR] = "UNKNOWN_COLOR"
 };
 
@@ -35,6 +38,27 @@ static const char * const genderNames[] = {
         [FEMALE] = "FEMALE",
 };
 
+char* convertMonth(int mon) {
+    char month[5];
+    switch(mon) {
+        case 0: strcpy(month, "01"); break;
+        case 1: strcpy(month, "02"); break;
+        case 2: strcpy(month, "03"); break;
+        case 3: strcpy(month, "04"); break;
+        case 4: strcpy(month, "05"); break;
+        case 5: strcpy(month, "06"); break;
+        case 6: strcpy(month, "07"); break;
+        case 7: strcpy(month, "08"); break;
+        case 8: strcpy(month, "09"); break;
+        case 9: strcpy(month, "10"); break;
+        case 10: strcpy(month, "11"); break;
+        case 11: strcpy(month, "12"); break;
+    }
+    printf("%s\n", month);
+    return month;
+}
+
+
 int printCat(struct cat catStructArray[], NumCats* totalCats, int index) {
     // less than 0
     if (index < 0) {
@@ -49,7 +73,8 @@ int printCat(struct cat catStructArray[], NumCats* totalCats, int index) {
     }
 
     struct cat currentCat = catStructArray[index];
-    fprintf(stdout,"cat index = [%d] name=[%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%f] collarColor1 = [%s] collarColor2 = [%s] license = [%llu]\n", index, currentCat.name, genderNames[currentCat.gender], breedNames[currentCat.breed], currentCat.isFixed, currentCat.weight, colorNames[currentCat.collarColor1], colorNames[currentCat.collarColor2], currentCat.license);
+    fprintf(stdout,"cat index = [%d] name=[%s] gender=[%s] breed=[%s] isFixed=[%d] weight=[%f] collarColor1 = [%s] collarColor2 = [%s] license = [%llu] birthday = [%s/%s/%s]\n", index, currentCat.name, genderNames[currentCat.gender], breedNames[currentCat.breed], currentCat.isFixed, currentCat.weight, colorNames[currentCat.collarColor1], colorNames[currentCat.collarColor2], currentCat.license,
+            convertMonth(currentCat.birthday.tm_mon), convertMonth(currentCat.birthday.tm_mon), convertMonth(currentCat.birthday.tm_mon));
     return 0;
 }
 
